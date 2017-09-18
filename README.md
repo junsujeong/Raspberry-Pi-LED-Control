@@ -9,15 +9,20 @@ I connected GPIO18 to 220 ohm resistor and anode(+), and connect GND to Cathode(
 
 If you have connected all the wire, check if it works properly by echo
 
-echo "18" > /sys/class/gpio/export /*set up GPIO18*/
+//set up GPIO18
+echo "18" > /sys/class/gpio/export 
 
-echo "out" > /sys/class/gpio/gpio18/direction /*setting it to output*/
+//setting it to output
+echo "out" > /sys/class/gpio/gpio18/direction 
 
-echo "1" > /sys/class/gpio/gpio18/value /*turn on the LED by setting the value to HIGH 1*/
+//turn on the LED by setting the value to HIGH 1
+echo "1" > /sys/class/gpio/gpio18/value 
 
-echo "0" > /sys/class/gpio/gpio18/value /*turn off the LED by setting the value to LOW 0*/
+//turn off the LED by setting the value to LOW 0
+echo "0" > /sys/class/gpio/gpio18/value 
 
-echo "18" > /sys/class/gpio/unexport /*disconnect GPIO18*/
+//disconnect GPIO18
+echo "18" > /sys/class/gpio/unexport 
 
 Running gpioLed.c
 
